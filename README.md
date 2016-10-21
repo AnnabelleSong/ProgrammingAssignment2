@@ -6,9 +6,10 @@
 
 \##So I write a pair of functions that cache the inverse of a matrix
 
-**\##Step1:Create a special "matrix" object that can cache its inverse.**
+
 ```
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {  
+## This function creates a special "matrix" object that can cache its inverse.
       inve <- NULL
       set <- function(y) {
               x <<- y
@@ -23,11 +24,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 ```
 
-**\##Step2: Computes the inverse of the special "matrix" created by makeCacheMatrix above.**
-
 
 ```
-'cacheSolve <- function(x, ...) {  ##Computing the inverse of a square matrix
+'cacheSolve <- function(x, ...) { 
+## This function computes the inverse of the special "matrix" created by makeCacheMatrix above.
        inve <- x$getInverse()
        if (!is.null(inve)) {   ## check to see if the inverse has already been calculated
        message("getting cached data")  ##if so,then it should retrieve the inverse from the cache
