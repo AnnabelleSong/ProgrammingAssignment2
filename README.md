@@ -27,10 +27,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ```
-'cacheSolve <- function(x, ...) {  \##Computing the inverse of a square matrix
+'cacheSolve <- function(x, ...) {  ##Computing the inverse of a square matrix
        inve <- x$getInverse()
-       if (!is.null(inve)) {   \## check to see if the inverse has already been calculated
-       message("getting cached data")  \##if so,then it should retrieve the inverse from the cache
+       if (!is.null(inve)) {   ## check to see if the inverse has already been calculated
+       message("getting cached data")  ##if so,then it should retrieve the inverse from the cache
        return(inve)
   }
       matr <- x$get()
